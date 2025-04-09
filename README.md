@@ -1,20 +1,8 @@
 # README
 
 ## This repository is a compilation of scripts from Lareau Lab, Ott Lab, and Fletcher Lab contributions. It has been specifically modified for Cas12 compatibility (while retaining Cas13 functionality)
-
-## Data needed
-python coreScripts/split_fasta_bySubtype.py --metadata Amazonensis_data/Leishmania_amazonensis_metadata.tsv --fasta Amazonensis_data/Leishmania_amazonensis_sequences.fasta
-
-python coreScripts/break_genomes.py --enzyme Cas12 --scriptdir coreScripts/ --input subtype_Leishmania_amazonensis.fa --out tiled_genomes/tiled_subtype_amazonensis --num_workers 32
-
-python coreScripts/count_combine_guides.py --metadata Amazonensis_data/Leishmania_amazonensis_metadata.tsv --pathPrefix tiled_genomes/tiled_subtype_
-
-Rscript coreScripts/reformatFilterGuideHits.R leishmania_all .95
-
-Rscript coreScripts/score_RNAfold_crRNAs.R --enzyme Cas12 --rnafold RNAfold --out . --cas_repeat UAAUUUCUACUAAGUGUAGAU
-
-Rscript coreScripts/filterGuidesFoldScore.R leishmania_all
-
+* https://github.com/lareaulab/cas13a_guide_design
+* (will enter Ott lab link here)
 
 ## Data needed
 reference genome sequence (.fa)
