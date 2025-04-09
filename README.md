@@ -6,24 +6,24 @@
 * (will enter Ott lab link here)
 
 ## Data needed
-reference genome sequence (.fa)
-sequenced viral genomes representing genetic diversity (.fa)
-Cas13a repeat sequence
+* reference genome sequence (.fa)
+* sequenced viral genomes representing genetic diversity (.fa)
+* Cas13a repeat sequence
 
 ## Need to install:
-bowtie
-RNAfold
-R, with libraries: optparse, here, Biostrings, parallel, doParallel
-Workflow (using scripts)
+* bowtie
+* RNAfold
+* R, with libraries: optparse, here, Biostrings, parallel, doParallel
+* Workflow (using scripts)
 
 ## Documentation
 1. Pull genomes from NCBI, etc. Extract metadata and fasta.
-   Script: extract_metadata_and_fasta.py
-   This script needs to be modified for query and filtering on lines 35, 85-100, 109, and 112.
+   * Script: extract_metadata_and_fasta.py
+   * This script needs to be modified for query and filtering on lines 35, 85-100, 109, and 112.
 2. Split fasta file by subtype
-   Script: split_fasta_by_subtype.py
-   Inputs: metadata file, fasta sequences
-   Bash command: python coreScripts/split_fasta_bySubtype.py --metadata Amazonensis_data/Leishmania_amazonensis_metadata.tsv --fasta Amazonensis_data/Leishmania_amazonensis_sequences.fasta
+   * Script: split_fasta_by_subtype.py
+   * Inputs: metadata file, fasta sequences
+   * Bash command: python coreScripts/split_fasta_bySubtype.py --metadata Amazonensis_data/Leishmania_amazonensis_metadata.tsv --fasta Amazonensis_data/Leishmania_amazonensis_sequences.fasta
 3. Break each genome into 20nt windows
    Script: break_genome.R
    Inputs: reference genome .fa file, enzyme name, output directory
