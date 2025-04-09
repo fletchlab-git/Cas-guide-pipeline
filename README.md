@@ -25,17 +25,17 @@
    * Inputs: metadata file, fasta sequences
    * Bash command: python coreScripts/split_fasta_bySubtype.py --metadata Amazonensis_data/Leishmania_amazonensis_metadata.tsv --fasta Amazonensis_data/Leishmania_amazonensis_sequences.fasta
 3. Break each genome into 20nt windows
-   Script: break_genome.R
-   Inputs: reference genome .fa file, enzyme name, output directory
-   Bash command: python coreScripts/break_genomes.py --enzyme Cas12 --scriptdir coreScripts/ --input subtype_Leishmania_amazonensis.fa --out tiled_genomes/tiled_subtype_amazonensis --num_workers 32
+   * Script: break_genome.R
+   * Inputs: reference genome .fa file, enzyme name, output directory
+   * Bash command: python coreScripts/break_genomes.py --enzyme Cas12 --scriptdir coreScripts/ --input subtype_Leishmania_amazonensis.fa --out tiled_genomes/tiled_subtype_amazonensis --num_workers 32
 4. Filter for inclusivity of guides threshold (eg. 50% of strains hit)
-   Script: reformatFilterGuideHits.R
-   Input: threshold number
-   Bash command: Rscript coreScripts/reformatFilterGuideHits.R leishmania_all .95
+   * Script: reformatFilterGuideHits.R
+   * Input: threshold number
+   * Bash command: Rscript coreScripts/reformatFilterGuideHits.R leishmania_all .95
 5. Calculate crRNA folding structures
-   Script: score_RNAgold_crRNAs.R
-   Input: enzyme name, output directory, RNAfold, cas repeat seqeunce (Cas12 sequences show in example below)
-   Bash command: Rscript coreScripts/score_RNAfold_crRNAs.R --enzyme Cas12 --rnafold RNAfold --out . --cas_repeat UAAUUUCUACUAAGUGUAGAU
+   * Script: score_RNAgold_crRNAs.R
+   * Input: enzyme name, output directory, RNAfold, cas repeat seqeunce (Cas12 sequences show in example below)
+   * Bash command: Rscript coreScripts/score_RNAfold_crRNAs.R --enzyme Cas12 --rnafold RNAfold --out . --cas_repeat UAAUUUCUACUAAGUGUAGAU
 6. Filter guides for Hairpin formation and fold score
    Script: filterGuidesFoldScore.R
    Bash command: Rscript coreScripts/filterGuidesFoldScore.R leishmania_all
