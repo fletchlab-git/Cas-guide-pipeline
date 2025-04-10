@@ -3,7 +3,7 @@
 ## This repository is a compilation of scripts from Lareau Lab, Ott Lab, and Fletcher Lab contributions. It has been specifically modified for Cas12 compatibility (while retaining Cas13 functionality)
 * https://github.com/lareaulab/cas13a_guide_design
 * https://github.com/duopeng/Cas13a_guides_Influenza
-* (will enter Ott lab link here)
+* https://github.com/qlangdon/screening_cas13a_guides?tab=readme-ov-file
 
 ## Data needed
 * reference genome sequence (.fa)
