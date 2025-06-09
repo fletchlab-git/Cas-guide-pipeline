@@ -5,7 +5,7 @@ library(tidyverse)
 args <- commandArgs(TRUE)
 inputPrefix <- args[1]
 
-guidesIn <- read_delim(paste0(inputPrefix, "_guides_filtered0.1.tsv"))
+guidesIn <- read_delim(paste0(inputPrefix))
 if ("refStart" %in% colnames(guidesIn)) {
   guidesIn <- guidesIn |> rename(start = refStart)
 }
