@@ -42,3 +42,5 @@
 
 At this point you will have a list of guide candidates that you can now filter check for cross-reactivity. There are many ways you can do this (bowtie, Kraken, etc.), but I would recommmend putting the guides through NCBI BLAST and filtering for only those that have less than 1/2 mismatches and seqeunce coverage. Remember if you are using Cas12, the PAM sequences needs to be included on the reverse complement region and needs to match. You can use the following script to do so:
 * guides_to_BLAST.py
+You can modify the following jupyter notebook to compile the results:
+* Compile_BLAST_output.ipynb
