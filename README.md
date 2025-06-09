@@ -38,7 +38,7 @@
    * Bash command: Rscript coreScripts/score_RNAfold_crRNAs.R --enzyme Cas12 --rnafold RNAfold --out . --cas_repeat UAAUUUCUACUAAGUGUAGAU
 6. Filter guides for Hairpin formation and fold score
    Script: filterGuidesFoldScore.R
-   Bash command: Rscript coreScripts/filterGuidesFoldScore.R leishmania_all
+   Bash command: Rscript coreScripts/filterGuidesFoldScore.R leishmania_all_guides_filtered0.5.tsv
 
 At this point you will have a list of guide candidates that you can now filter check for cross-reactivity. There are many ways you can do this (bowtie, Kraken, etc.), but I would recommmend putting the guides through NCBI BLAST and filtering for only those that have less than 1/2 mismatches and seqeunce coverage. Remember if you are using Cas12, the PAM sequences needs to be included on the reverse complement region and needs to match. You can use the following script to do so:
 * guides_to_BLAST.py
